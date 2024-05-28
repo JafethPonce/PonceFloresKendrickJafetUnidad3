@@ -1,0 +1,17 @@
+{
+    "name": "ivana/poncefloreskendrickjafet-unidad1",
+    "autoload": {
+        "psr-4": {
+            "Ivana\\PoncefloreskendrickjafetUnidad1\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ivan Alejandro",
+            "email": "ivanalejandro.lopez07@gmail.com"
+        }
+    ],
+    "require": {
+        "google/cloud-recaptcha-enterprise": "^1.12"
+    }
+}
