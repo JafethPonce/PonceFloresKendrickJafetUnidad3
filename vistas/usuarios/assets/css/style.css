@@ -3215,3 +3215,41 @@ footer.site-footer .footer-inner a {
 .whatsapp-button:hover {
   background-color: #128c7e;
 }
+
+#time,
+#date {
+  transition: opacity 0.5s ease-in-out; /* Transición de opacidad */
+}
+
+#time.animate,
+#date.animate {
+  opacity: 1; /* Hacer visible cuando se añade la clase .animate */
+}
+
+.fade-in {
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.btn-animated {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-animated:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}

@@ -15,7 +15,7 @@ function generate_breadcrumbs()
 
 
     $path = '';
-    echo '<li><a href="/">Inicio</a></li>';
+    echo '<li><a href="/">Inicio /</a></li>';
     foreach ($breadcrumbs as $key => $crumb) {
         $path .= '/' . $crumb;
         // Capitaliza la primera letra de cada segmento del URL

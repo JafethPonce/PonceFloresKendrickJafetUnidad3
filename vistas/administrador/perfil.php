@@ -1,7 +1,5 @@
 <?php
 session_start();
-include '../../protectroute.php'; 
-
 ?>
 
 <!doctype html>
@@ -9,8 +7,8 @@ include '../../protectroute.php';
 < <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Pagina - Style Clothing</title>
-    <link href="../../assets/img/clothes-hanger.png" rel="icon">
+    <title>Perfil | Admin</title>
+    <link href="../../assets/img/xd.png" rel="icon">
 
     <meta name="description" content="Ela Admin - HTML5 Admin Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,7 +37,7 @@ include '../../protectroute.php';
                 <div id="main-menu" class="main-menu collapse navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li class="active">
-                            <a href="index.php"><i class="menu-icon fa fa-laptop"></i>Tablero Principal > Perfil </a>
+                            <a href="index.php"><i class="menu-icon fa fa-laptop"></i>Tablero Principal </a>
                         </li>
                         <li class="menu-title">Opciones </li><!-- /.menu-title -->
                         <li class="menu-item-has-children dropdown">
@@ -64,6 +62,7 @@ include '../../protectroute.php';
                         <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
                     </div>
                 </div>
+                
                 <div class="top-right">
                     <div class="header-menu">
                         <div class="header-left">
@@ -79,8 +78,9 @@ include '../../protectroute.php';
                         <div class="user-area dropdown float-right">
 
                             <a href="#" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Bienvenido <?php echo $_SESSION['nombre']; ?>
+                                Bienvenido Administrador <?php echo $_SESSION['nombre']; ?>
                             </a>
+
                             <div class="user-menu dropdown-menu">
                                 <a class="nav-link" href="perfil.php"><i class="fa fa- user"></i>Mi Perfil</a>
                                 <a class="nav-link" href="#"><i class="fa fa-power -off"></i> <button id="cerrar" type="submit" class="btn btn-danger">Cerrar sesión</button> </a>
@@ -92,8 +92,8 @@ include '../../protectroute.php';
             </header>
             <div class="sufee-login d-flex align-content-center flex-wrap">
                 <div class="container">
-                    <!-- probar -->
-                    <nav aria-label="breadcrumb">
+                      <!-- probar -->
+                      <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <?php include '../../breadcrumbs.php';
                             generate_breadcrumbs(); ?>
@@ -128,7 +128,7 @@ include '../../protectroute.php';
                                     <label>Password</label>
                                     <input type="text" class="form-control" value="<?php echo $_SESSION['psw']; ?>" name="psw" id="psw">
                                 </div>
-                                <button type="submit" name="actualizar" id="actualizar">Actualizar datos</button>
+                                <button type="submit" name="actualizar" id="actualizar" class="btn btn-primary">Actualizar datos</button>
                                 
 
                             </form>

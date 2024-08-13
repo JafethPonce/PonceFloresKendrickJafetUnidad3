@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-include( '../../protectroute.php'); 
+include '../../protectroute.php'; 
 ?>
 
 <!doctype html>
@@ -25,6 +25,9 @@ include( '../../protectroute.php');
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.0/css/flag-icon.min.css">
     <link rel="stylesheet" href="assets/css/cs-skin-elastic.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <!--CDN EMOJIS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@joeattardi/emoji-button@4.6.2/dist/index.min.css">
+
     <link href="https://cdn.jsdelivr.net/npm/chartist@0.11.0/dist/chartist.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/jqvmap@1.5.1/dist/jqvmap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/weathericons@2.1.0/css/weather-icons.css" rel="stylesheet" />
@@ -75,7 +78,7 @@ include( '../../protectroute.php');
 
                         <div class="user-menu dropdown-menu">
                             <a class="nav-link" href="perfil.php"><i class="fa fa- user"></i>Mi Perfil</a>
-                            <a class="nav-link" href="#"><i class="fa fa-power -off"></i> <button id="cerrar" type="submit">Cerrar sesión</button> </a>
+                            <a class="nav-link" href="#"><i class="fa fa-power -off"></i> <button id="cerrar" type="submit" class="btn btn-danger">Cerrar sesión</button> </a>
                         </div>
                     </div>
 
@@ -84,12 +87,18 @@ include( '../../protectroute.php');
 
         </header>
 
+        <div id="clock-container" class="fade-in">
+            <div id="time" class="animate"></div>
+            <div id="date" class="animate"></div>
+        </div>
+
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <?php include '../../breadcrumbs.php';
                 generate_breadcrumbs(); ?>
             </ol>
         </nav>
+        
         <!-- /#header -->
 
         <!-- Content -->
@@ -99,7 +108,7 @@ include( '../../protectroute.php');
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-body">
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addNoteModal">
+                        <button type="button" class="btn btn-primary btn-animated" data-toggle="modal" data-target="#addNoteModal">
                                 Agregar Nota
                             </button>
                         </div>
@@ -138,12 +147,7 @@ include( '../../protectroute.php');
             </div>
               <!-- Contenedor para cargar el modal -->
             <div id="modalContainer"></div>
-
         </div>
-
-
-
-
     </div>
     </div>
     </div>
@@ -206,8 +210,13 @@ include( '../../protectroute.php');
     <script src="assets/js/session.js"></script>
     <script src="assets/js/modal.js"></script>
     <script src="assets/js/procesonota.js"></script>
+    <!--script para la inactividad-->
+    <script src="../../assets/js/inactivity.js"></script>
+    <script src="../../assets/js/Clock.js"></script>
 
+    <!--Script para los emojis-->
+    <script src="https://cdn.jsdelivr.net/npm/@joeattardi/emoji-button@4.6.2/dist/index.min.js"></script>
+    <script src="assets/js/emojis.js"></script>
 
 </body>
-
 </html>

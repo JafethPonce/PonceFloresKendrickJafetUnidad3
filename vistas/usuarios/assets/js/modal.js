@@ -1,5 +1,8 @@
 $(document).ready(function () {
   $("#modalContainer").load("modal.php", function () {
+    // Inicializar el selector de emojis después de cargar el modal
+    initializeEmojiPicker();
+
     // El código para manejar el envío del formulario puede ir aquí
     $("#addNoteForm").on("submit", function (event) {
       event.preventDefault(); // Evitar el envío tradicional del formulario
@@ -33,3 +36,21 @@ $(document).ready(function () {
     });
   });
 });
+
+function initializeEmojiPicker() {
+  // Verifica si el botón de emojis está presente
+  const button = document.querySelector("#emoji-button");
+  if (button) {
+    // Inicializa el EmojiButton
+    const picker = new EmojiButton();
+    const noteContent = document.querySelector("#noteContent");
+
+    picker.on("emoji", (emoji) => {
+      noteContent.value += emoji;
+    });
+
+    button.addEventListener("click", () => {
+      picker.togglePicker(button);
+    });
+  }
+}

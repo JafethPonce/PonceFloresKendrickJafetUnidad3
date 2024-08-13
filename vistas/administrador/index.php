@@ -10,7 +10,7 @@ include( '../../protectroute.php');
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Inicio - Blog Site </title>
+    <title>Inicio - Blog Site | Admin</title>
     <link href="../../assets/img/xd.png" rel="icon">
     <meta name="description" content="Ela Admin - HTML5 Admin Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -70,7 +70,7 @@ include( '../../protectroute.php');
                     <div class="user-area dropdown float-right">
 
                         <a href="#" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Bienvenido <?php echo $_SESSION['nombre']; ?>
+                            Bienvenido Administrador <?php echo $_SESSION['nombre']; ?>
                         </a>
 
                         <div class="user-menu dropdown-menu">

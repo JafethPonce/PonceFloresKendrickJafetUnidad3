@@ -27,25 +27,31 @@ session_start();
         <!-- Formulario para agregar nueva nota -->
         <form id="addNoteForm">
           <div class="form-group">
-            <label for="noteName">Nombre</label>
+            <label for="noteName">Usuario:</label>
             <input 
             value="<?php echo $_SESSION['nombre']; ?>"
               type="text"
               class="form-control"
               id="noteName"
               name="Nombre"
-              
+              readonly
             />
           </div>
           <div class="form-group">
-            <label for="noteContent">Nota</label>
-            <textarea
-              class="form-control"
-              id="noteContent"
-              name="Nota"
-              required
-            ></textarea>
-          </div>
+                <label for="noteContent">Nota:</label>
+                <div class="input-group">
+                  <textarea
+                    class="form-control"
+                    id="noteContent"
+                    name="Nota"
+                    required
+                  ></textarea>
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" id="emoji-button">&#x1F642;</button>
+                  </div>
+                </div>
+            </div>
+
           
           <button type="submit" class="btn btn-primary">Guardar Nota</button>
         </form>

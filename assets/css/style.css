@@ -1609,3 +1609,16 @@ section {
 .whatsapp-button:hover {
   background-color: #128c7e;
 }
+
+.fade-in {
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
